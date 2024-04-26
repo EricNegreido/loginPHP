@@ -14,8 +14,10 @@ try{
 
   $number_reg = $resultado->rowCount();
 
-  if($number_reg){
-    echo "Se Inicio Sesion";
+  if($number_reg){ // EL USUARIO EXISTE Y SUS CREDENCIDALES SON CORRECTAS
+    session_start(); //INICIAMOS SESSION
+    $_SESSION["usuario"] = $_POST["login"]; //ALMACENAMOS EN LA VARIABLE SUPERGLOBAL EL lOGIN DEL USUARIO
+    header("location:users.php");
   }else{
     //Redirigir a login nueveamente
     header("location:index.php");
