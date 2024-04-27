@@ -13,9 +13,12 @@
     }
   ?>
    <h1> Bienvenido </h1>
-   <p> Ingreseaste a correctamente </p>
    <?php 
     echo "<p>" . $_SESSION['usuario'] .  "</p>";
    ?>
+   <p> Ingreseaste a correctamente </p>
+
+   <p> <a href="logout.php"> Logout </a> </p>
+  
 </body>
 </html>
